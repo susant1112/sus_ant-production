@@ -1,0 +1,38 @@
+setcpm(310/8)
+//main melody 
+$:note("c4 eb4 <e4  d4 >eb4  ")
+.fast(4)  
+.s("triangle")
+.slow(2)
+.room(0.5)
+
+
+// melody
+$:note("c2 ~ c2 ~ eb2 ~ c2 ~")
+.s("sawtooth")
+.lpf(600)
+.decay(0.2)
+.gain(0.5)
+.fast(1)
+
+
+$:note("c4 eb4 g4 bb4 g4 eb4 c4 ~")
+.sound ("triangle")
+.lpf(1500)
+.release(0.4)
+.room(0.3)
+.slow(2)
+.hpf(100)
+.gain(0.5)
+
+cpm(500/8)
+$:s("< circuitsdrumtracks_bd alesissr16_sd bd*2> < circuitsdrumtracks_bd cp > circuitsdrumtracks_bd cp, hh*8 ").gain(1)
+.hpf(100)
+$:s("- < sd rim sd*2 > - - - - - sd").gain(1)
+$:s("bossdr55_hh*8").gain(1)
+$:s("< crow crow*2> " ).gain(0.4)
+
+
+$:s("bossdr55_bd bossdr550_rim     bossdr55_bd bossdr550_rim                   " ).gain(0.5)
+
+

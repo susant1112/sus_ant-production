@@ -1,0 +1,45 @@
+//making new shiii
+//first comes the melodies 
+// lets try to make it lofi
+
+setcpm(340/8)
+$: note("a4 f5 <e5 e5*2> <c5 a4> ")
+.s("triangle")
+.slow(2)
+.room(1)
+ .gain(.4)
+.hpf(100)
+.decay(2)
+.vib(4)
+.vibmod(0.5)
+
+
+$: note("e4 < g4 a4 c5>  d4 f3   ").s("sawtooth").decay(.2).lpd(5)
+.sustain(0.5)
+.slow(2)
+gain(.6)
+vib(3)
+
+
+//smth new
+$: note("< d1 c4 > e4 <g4 a4 a4*2 f4 f4*2> < e4  g4> ").slow(2)
+.s("triangle").decay(0.5)
+.room(2)
+.vib(0.2)
+.vibmod(0.3)
+.release(0.4)
+
+
+// time for drums
+
+$:s( "9000_sd     9000_sd      9000_sd           ,- alesissr16_cp -  ").gain(1)
+$:s(" - alesissr16_rim - - - < - alesissr16_rim> ").gain(1)
+$:s( "< crow  -  -  - > ").room(2).gain(.9) .vib(0.5)
+$:s("  - < -    alesishr16_ht> ") .gain(0.5)
+
+
+//side sounds
+$:s(" - - bossdr220_ht" ) .gain(0.5)
+$:s(" - - - - -  <- bossdr220_ht  > " ) .gain(0.5)
+$:s("wind - - ")
+$:s("compurhythm8000_bd   compurhythm8000_bd  compurhythm8000_bd  ").gain(4)

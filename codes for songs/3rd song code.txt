@@ -1,0 +1,83 @@
+// for  this lets do  a lil bit of ummmmm 
+// this is call tryout , i am tryna tryout new effects here
+// the first one is
+ //fade
+//imma keep here others that i see
+
+
+
+//lets do melody first 
+
+ setcpm(15)
+$: note("a4 c5 e5 f5 ")
+.vib(3)
+.lpf(100)
+.vibmod(0.4)
+.gain(0.6)
+
+
+
+
+$: note("<g4 b4>< d5 b4 >     ").delay(1.5)
+.room(2)
+.gain(0.5)
+
+
+
+
+$:note ("<f4 e4>  a4  <a4 c5> < a4 e4 e4*2 > <f4 f4*3> a4 c5 a4 ") .delay(2)
+.s("square")
+.decay(3)
+.room(1)
+.roomsize(2)
+.gain(0.5)
+// .vib(0.4)
+// .vibmod(0.4)
+
+
+$:s("- circuitsdrumtracks_rim*4" )
+.room(1)
+
+
+$:s("bossdr220_bd <casiovl1_sd casiovl1_sd*2> bossdr220_bd casiovl1_sd ") .gain(2)
+
+$:s("- circuitstom_sd  - circuitstom_sd    ")
+
+
+$:s( "   casiorz1_bd*8    ").gain(1)
+.room(0.3)
+$:s( "circuitsdrumtracks_hh*4") 
+
+$:note("<[c2 c3]*4 [bb1 bb2]*4 [f2 f3]*4 [eb2 eb3]*4>")
+.sound("gm_electric_guitar_jazz")
+.gain(1.4)
+.lpf(800) 
+.hpf(500)
+
+
+$:s("crow").slow(2).room(2)
+vib(3)
+
+$:s("-    -  - alesissr16_rim * 2") .gain(1)
+
+$:s(" - ,<circuitsdrumtracks_ht circuitsdrumtracks_ht circuitsdrumtracks_ht circuitsdrumtracks_ht*4> - ")
+.room(2)
+.vib(2)
+.echo(8,1/6, .3)
+
+$:s(" - - - <  -   -    -   - bossdr550_cb> ")
+
+
+
+$:s("bossdr220_hh*16")
+.gain(0.5)
+.room(0.2)
+.vib(3)
+
+$:s("compurhythm78_hh*16")
+
+.room(0.2)
+.vib(3)
+.gain(0.5)
+
+

@@ -1,0 +1,69 @@
+//imma do smth cool
+//smth i never did 
+
+
+
+// lets do melody first cuz that is what i do always 
+
+setcpm(125/8)
+
+$:note("g4 b4 d5 B4      <A4 g4> <C5  b4 > <E5 d5 > <G5 b4>  <a4 g4> b4 d5 b4    g4 b4 d5 b4          ")
+.s("< triangle sine>")
+.lpf(4000)
+.vib(0.3)
+.vibmod(2)
+.decay(2)
+.room(1)
+.gain(0.3)
+._scope()
+
+
+$:note(" <g4 b4> <d5 g5> <a4 c5> <e5 c5>    <g4 b4> <d5 g5> <a4 c5> <e5 c5>")
+ .s("<triangle>")
+
+
+.decay(2)
+.gain(0.4)
+.room(1)
+._scope()
+
+$:note(" <c5 e5> g5 <d5 f5> e5 <e5 g5> d5 <c5 a4> g4   <c5 e5> g5 <d5 f5> e5 <e5 g5> d5 <c5 a4> g4   "          ) .s("<triangle>")
+
+.s("gm_harmonica")
+// .decay(2)
+.room(1)
+.roomsize(2)
+._scope().gain(0.9)
+
+$:note("       d5 f5 a5 c6    f4 a4 c5 e5    ")  .s("gm_orchestral_harp")
+.gain(0.4)
+.room(2)
+
+._scope()
+
+
+
+$:s("          alesissr16_cb      casiorz1_sd   , bossdr110_bd*8") 
+.room(1)
+.lpq(1)
+.lpf(200)
+
+
+$:s("< alesishr16_bd 9000_bd > bossdr550_sd <   9000_bd   alesissr16_sd >9000_sd  9000_bd 9000_sd  9000_bd 9000_sd   ").fast(1)
+
+
+$:s("  -   <  9000_mt     -   -   - >").room(2)
+
+
+$:s("bossdr550_sd *4 ").gain(.5)
+
+$:s(" < bd rim  alesissr16_cb > sd bd sd   bd sd bd sd     ")
+
+$:s("  <  bossdr220_hh bossdr220_hh bossdr220_hh [bossdr220_hh*3]  > ")
+
+
+
+$:s(" alesissr16_cb          <   -   -    - alesissr16_cb*3      >  ").slow(.5)
+
+
+$:s("< -  - crow > ").gain(1.1)
