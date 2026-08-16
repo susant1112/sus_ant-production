@@ -1,0 +1,61 @@
+//
+
+// wanna try diff ting , ears are ringing 
+
+//11th beat
+
+setcpm(300/16)
+
+// melody first 
+
+$:note("g4 a4 c5 b4 a4 f4 g4 d5 e5 c5 b4 g4 a4 c5 d5 g5 g4 a4 c5 e5 d5 c5 a4 g4 b4 d5 f5 e5 c5 a4 d5 g5    ").s("gm_orchestral_harp").slow(2)
+
+
+  .lpf(7000)
+
+  .hpf(500)
+
+  .room(.4)
+
+  
+  .hurry(0.5)
+
+  
+  .gain(1.4)
+
+$:note("- b4 d5 e5 d5 b4 a4 g4 c5 e5 g5 e5 d5 b4 a4 c5") .s("gm_orchestral_harp").gain(.4)
+  ._punchcard()
+
+  .lpf(20000)
+.lpq(2)
+
+
+
+//drumss
+$:stack(
+        s("d110_rim - - - - - - - - d110_rim - - - - - d110_rim").room(.3).gain(1.52),
+
+
+  
+        s("- - - hh  - - - - - - - - < linndrum_hh  linndrum_hh linndrum_hh*3 >  -"),
+
+
+  
+        s("- - - - dr110_cp - - - - - - - dr110_cp - -  -").room(.32).gain(2),
+
+
+  
+        s("-  - rim  - - - - - - - -").gain(.4).room(2),
+
+  
+    )
+
+  
+                         ._punchcard()
+  
+
+  
+  
+    
+
+

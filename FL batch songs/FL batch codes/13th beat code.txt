@@ -1,0 +1,67 @@
+// beat 
+
+
+setcpm(370/16)
+// melody first ..
+$:note(" g2 bb2 c3 d3 f3 d3 c3 bb2 a2 c3 d3 f3 g3 f3 d3 c3").s("gm_baritone_sax").slow(2)
+.lpf(30000)
+.lpattack(.01)
+.lpdecay(1.18)
+.lpsustain(0.2)
+.lpenv(3)
+.lpq(.5)
+.attack(.02)
+.release(.1)
+.shape(0.1)
+.gain(0.6)
+.orbit(1)
+.punchcard()
+//.mask("<   0 0   1!999>")
+//second melody...
+$:note("e4 g4 a4 c5 b4 a4 g4 e4 d4 f4 a4 g4 e4 d4 b3 e4 e4 g4 a4 c5 b4 a4 g4 e4 d4 f4 a4 g4 e4 d4 b3 e4 ").s("gm_acoustic_guitar_steel").slow(2)
+.lpf(2000)
+.lpattack(.2)
+.lpdecay(1.18)
+.lpsustain(0.2)
+.lpenv(3)
+.lpq(.5)
+.attack(0.02)
+.release(.04)
+.shape(0.1)
+.vib(.4)
+.vibmod(.6)
+.gain(.91)
+.mask("<   0 0   1!999>")
+.punchcard()
+
+
+
+
+// .. drums ..
+
+$:stack(
+  s(" < - rolandsh09_bd> - - - < rolandsh09_bd rolandsh09_bd rolandsh09_bd*3> - - - - - - - rolandsh09_bd - - -  "),
+
+  
+  s(" - dmx_sd - - - - dmx_sd - - - - - - dmx_sd - -  ").gain(2),
+
+  
+  s(" - - alesissr16_cp - - - - - < alesissr16_cp alesissr16_cp*3 >  - - - - - - -  ").gain(2),
+
+  
+  s(" - - - d110_rim - - - - - - - -  d110_rim d110_rim d110_rim  d110_rim  ").gain(1.6),
+
+  
+  s(" < hr16_hh hr16_hh*3> - hr16_hh - hr16_hh - hr16_hh - hr16_hh - < hr16_hh hr16_hh*3 > - hr16_hh - hr16_hh -  "),
+
+  
+  s(" - ct - - - - - - - - - < - - circuitsdrumtracks_cr >  - < - - circuitsdrumtracks_cr > - < - - circuitsdrumtracks_cr > ").room(.5).gain(.2),
+
+)
+.mask("<   0 0 0 0  1!999>") .punchcard()
+//$:s("  [bd casiorz1_sd  bd  -- ], [sd cp sd cp] , --  -- < rim  rim*4  rim*2>  ,< -- casiosk1_mt > ").slow(1)
+
+
+
+
+    

@@ -1,0 +1,51 @@
+// cant rust grateness
+
+
+
+setcpm(300/16)
+
+$:note(" [a4 c5 e5 d5 c5 a4 g4 e4 a4 c5 e5 g5 a5 g5 e5 c5]" ).s("gm_clavinet")
+.lpf(30000)
+.room(.4)
+  .lpq(2)
+  .decay(2)
+._punchcard()
+.mask("<   0 0   1!999>")
+
+$:note("      e4 g4 a4 c5 b4 g4 e5 d5         ").s("gm_shamisen").gain(.72)
+.vib(2)
+.vibmod(2)
+.room(.5)
+
+
+
+
+
+
+
+
+
+//drumsssss
+
+setcpm(330/16)
+
+$:stack(
+  s("alesishr16_bd - - alesishr16_bd - - - - alesishr16_bd - - - - - < alesishr16_bd alesishr16_bd*2> - "),
+
+
+  
+  s("- - dmx_sd - - dmx_sd - - - - dmx_sd - - - - - "),
+
+  
+  s("casiosk1_hh casiosk1_hh - casiosk1_hh - casiosk1_hh casiosk1_hh - - - - - - < casiosk1_hh casiosk1_hh casiosk1_hh*3 >- -"),
+
+
+
+  
+
+  
+  s("- - compurhythm8000_rim - - - compurhythm8000_rim  - - - - compurhythm8000_rim - - - - ")
+)
+.mask("<0 0 0  0  0 0 1!999>")
+         .punchcard()
+._spiral({ steady: .96 })

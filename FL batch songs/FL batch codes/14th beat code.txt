@@ -1,0 +1,46 @@
+//14 beat
+
+// cant rush greatness . top dawg big shii
+
+
+setcpm(350/16)
+
+//melody first
+
+$:note("e4 g4 b4 d5 c5 a4 f4 e4 g4 b4 d5 e5 f5 d5 b4 a4 g4 e4 f4 a4 c5 b4 g4 e4 d5 f5 a5 g5 e5 c5 b4 ").s("gm_violin").slow(2)
+.lpf(30000)
+.lpattack(0.01)
+.lpdecay(.18)
+.lpsustain(.2)
+.lpenv(3)
+.lpq(3)
+.attack(0.01)
+.release(.166)
+.shape(0.1)
+.gain(1)
+.orbit(1)
+.room(.4)
+.mask("<0 0 0  0  1!999>")
+
+$:note(" a4 c5 e5 g5 e5 d5 c5 a4 b4 d5 f5 a5 f5 e5 d5 b4 c5 e5 g5 b5 g5 e5 d5 f5 a5 c6 a5 g5 e5 d5 c5").s("gm_lead_7_fifths").slow(2)
+.gain(.7)
+.lpf(2999)
+.lpq(.3)
+.attack(0.01)
+.release(.041)
+.room(.2)
+.orbit(1)
+.vib(.04)
+.vibmod(.5)
+
+
+$:stack(
+     s(" bd - - casiorz1_cb - - casiorz1_cb - -  bd - - - bd - - ").gain(2),
+     s(" - - - - - - - akaimpc60_sd - - - - - - - - ").gain(.35),
+     s(" - alesissr16_hh - - - dr550_cp <  -  dr550_cp > <-   dr550_cp > - - - - - - - - ").gain(2),
+  
+  )
+.mask("<0 0 0  0   1!999>")
+
+$:s(" sd bd sd sd bd cp sd bd ").gain(2).mask("<0 0 0  0 0 0 1!999>")
+$:s("alesissr16_hh*16").mask("<0 0 0  0 0 0  1!999>")

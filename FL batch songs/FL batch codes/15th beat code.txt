@@ -1,0 +1,29 @@
+// 15 the beat . (road to fl)
+/// ....FL.....
+// cant rush greatness
+
+setcpm(350/16)
+//melody
+$:note(" e4 - < e4 e3 > - e4 - <e3 e4 e4 > - < e4 e3 e4> - e4 - e4 - e4 -   ").s("gm_shamisen")
+.lpf(20000).lpattack(0.01).lpdecay(0.18).lpsustain(0.2).lpenv(3).lpq(5)//.attack(0.02).release(.2).shape(0.1)
+//.gain().orbit(1).mask("<1 1 1 1 0!999>").punchcard()
+///drums melodyyy...
+$:note("e2 g2 a2 b2 g2 e2 d2 e2 a2 g2 e2 d2 b1 d2 e2 e2 ").s("gm_slap_bass_2")
+  .lpattack(0.01).lpdecay(0.18)
+.room(.2)
+.room(.6)
+.mask("<0 0 0 0 1!999>")
+.punchcard()
+$:note("e2 g2 a2 b2 g2 e2 d2 e2 a2 g2 e2 d2 b1 d2 e2 e2 ").s("gm_tenor_sax").gain(.5)
+.room(.6)
+.mask("<  0  0 0 0 1!999>")
+.punchcard()
+//...................................
+$:stack(
+   s("bossdr550_bd - - - - - bossdr550_bd - - - - - - - - - ").gain(2),
+   s("- - circuitsdrumtracks_sd - - - - - - circuitsdrumtracks_sd - - circuitsdrumtracks_sd - - - ").gain(1.6),
+   s("- - - - bossdr55_hh - - - < bossdr55_hh*3 bossdr55_hh> - - - - - - - "),
+   s("- - alesissr16_cb - - - - - - - alesissr16_cb -  - - < bossdr550_cp bossdr550_cp bossdr550_cp*3 bossdr550_cp >- "),
+    )
+.mask("<0 0 0 0  1!999>")
+.punchcard()

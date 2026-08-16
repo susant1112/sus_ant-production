@@ -1,0 +1,40 @@
+
+lost beat (6)
+
+setcpm(220/8)
+
+$:note("e3 e4 <e3 c4> e6 g4 e4 e3 c4 e3 e4 <e3 c4> <e4 d2> e3 e4 e3")
+.s("gm_celesta")
+.room(1.2)
+.lpq(2)
+.vib(0.2)
+.decay(24)
+.lpf(2000)
+.gain(.5)
+.compressor("-20:20:100:.002:.02")
+.punchcard()
+
+$:note("<- g4> <e4 d5> <d4 f5> bb5 f5 d5 bb4 g4")
+.s("sbd")
+.hpf(3000)
+.decay(2)
+.release(.5)
+.vib(.3)
+.compressor("-20:20:100:.002:.02")
+.lpf(200)
+
+$:s("alesishr16_bd - - alesishr16_bd   alesishr16_bd - - < - alesishr16_bd alesishr16_bd*2 >")
+.room(0.2)
+.vib(0.2)
+.distort(1)
+.vibmod(2)
+.compressor("-20:20:100:.002:.02")
+
+$:s(" - circuitsdrumtracks_sd - circuitsdrumtracks_sd     ").gain(2)
+.compressor("-20:20:100:.002:.02")
+
+$:s(" -  -  -  < -     akaimpc60_perc -  akaimpc60_perc*2 >     ").room(2).gain(.4).compressor("-20:20:100:.002:.02")
+
+$:s("rim - rim - rim - ").slow(1.1).gain(.2)
+
+$:sound("bd bd - cp").extend(2)    .gain(.2)

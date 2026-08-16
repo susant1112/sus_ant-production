@@ -1,0 +1,56 @@
+
+
+setcpm(270/8)
+$:note(" <d4 e4  e3*2  e4  > f4 g4 <a4  a4 a4*2 > g4 f4 d4 < c4 g3 g3*3> ").s("gm_shamisen")
+.slow(1)
+.hpf(200)
+.lpf(4000)
+.lpq(2)
+.distort(1.1)
+
+$:n("0 [2 4] <3 5> [~ <4 1>]".add("<0 [0,2,4]>"))
+.scale("C5:minor").release(.5)
+.sound("gm_xylophone").room(.5)
+
+
+
+
+// lets make a backgroup melody
+
+$:note("c4 d4 e4 g4 a4 g4 e4 d4 ,c4 e4 g4 a4 c5 a4 g4 e4")
+.s("gm_voice_oohs")
+.gain(.3)
+
+$:note("e4")  .s("gm_trombone") 
+.decay(2)
+.vib(2)
+
+
+$:s(" bd   -   -  bd  -  -  -  bd ").gain(0.2)
+// .room(2)
+$:s(" -   -   sd  -   -  sd -  - ").gain(0.2)
+$:s(" -   rim   - <  -  rim  rim*2 > ").gain(0.2)
+$:s("cp cp cp cp").slow(2)
+
+//$:s("
+
+$:s("bd sd bd cp")
+$:s("sh sh")
+
+$:s(" < - bd > cp bossdr220_sd cp bd cp bossdr220_sd cp ").slow(2)
+.room(.2)
+
+
+$:s(" bd bd bd bd ")
+
+
+$:s(" akaimpc60_ht  akaimpc60_ht akaimpc60_ht   ")
+
+$:(" bossdr550_lt -    -   -  bossdr550_lt - -  ")
+$:("  sd sd   ")
+
+$:s("alesishr16_ht  -  -  <   alesishr16_ht > ").gain(.2)
+
+
+
+
