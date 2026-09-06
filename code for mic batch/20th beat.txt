@@ -1,0 +1,41 @@
+//20th beat
+
+//cant rush greatness 
+
+
+
+// intro 
+
+$:note("< c5 > - [e5 g5 b5] -").s("gm_piano")
+.gain(.6)
+.orbit(2)
+.vib(.2)
+.vibmod(.3)
+.mask("< 1 1 1 1 >")
+
+$:note("c2 c2 eb2 g2 bb2 g2 eb2 c2 d2 f2 a2 c3 bb2 a2 g2 eb2").s("gm_slap_bass_2").slow(2)
+.room(.4)
+.gain(.7)
+.vib(.2)
+.vibmod(.2)
+.mask("< 0 1 1 1  >")
+
+
+$:note("c4 eb4 g4 bb4").s("gm_voice_oohs").gain(.52)
+
+.mask("<  0 0 1 1!4 >")
+
+.punchcard()
+
+$:note("c4 d4 eb4 g4 a4 c5 d5 f5 g5 a5 c6 d6 eb6 f6 g6 a6").s("gm_dulcimer").gain(.92).slow(2)
+
+
+
+$:stack(
+  s("linn_bd - - - linn_bd  - -  - linn_bd  - - - linn_bd - - - ").gain(1.62),
+ s("- - rolandcompurhythm8000_cp - - - - - - - - - rolandcompurhythm8000_cp - - - "),
+ s("- - -  yamaharx21_cp  - - - yamaharx21_cp - - - - - - yamaharx21_cp - "),
+ s("compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh  - compurhythm8000_hh - ")
+ )
+.mask("< 0 1 1 1 0  1!999 >")
+
