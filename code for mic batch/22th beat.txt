@@ -1,0 +1,90 @@
+//22th beat...
+//cant rush greatness
+
+setcpm(500/16)
+//intro
+
+$:note("c4 eb4 g4 bb4 , < - e4 >").s("gm_synth_bass_1")
+.orbit(2)
+.decay(2)
+.lpf(10000) .gain(.3)
+.mask("< 1 0 0 0 >")
+$:note("c4 eb4 f4 ab4").s("gm_synth_bass_1")
+.orbit(2)
+.decay(2)
+.lpf(10000) .gain(.3)
+.mask("< 0 1 0 0 >")
+$:note("g3 bb3 d4 g4").s("gm_synth_bass_1")
+.orbit(2)
+  .lpf(10000) .gain(.3)
+.decay(2)
+.mask("< 0 0 1 0 >")
+$:note("d4 f4 a4 c5").s("gm_synth_bass_1")
+.orbit(2)
+.decay(2)
+  .gain(.3)
+  .lpf(10000)
+.mask("<0 0 0 1 >")
+
+$:note("<G2 Bb3> <D4 G4> <F4 D4> <Bb3 G3>").s("gm_piano")
+  .gain(.2)
+
+$:note("<G2 Bb2 D3 G3> [F3 D3 Bb2 G2]").s("gm_koto").slow(4)
+.orbit(4)
+  .vib(.2)
+  .lpq(2)
+._punchcard()
+.mask("<0!4 1!343>")
+
+
+
+$:note("g4 d4 f4 ").s("gm_synth_brass_2")
+  .gain(.3)
+  .lpq(2)
+  .lpf(15000)
+  .mask("< 0!6 1!999 >")
+._punchcard()
+
+$:note("<  - e4*2  - e4> - - g5 ").s("gm_voice_oohs")
+.gain(.3)
+.decay(4)
+
+
+$:stack(
+s("< d110_perc linn9000_ht dr550_rim> - - - - < hh*2  hh hh > - <hh  - hh*4> - - - - - hh hh < - hh - hh >"),
+s("- - - - - - casiosk1_sd - - - - circuitstom_bd - - - -"),
+s("- circuitstom_cp - circuitstom_cp - - - - circuitstom_cp - - circuitstom_cp - casiosk1_sd - -"), 
+)
+.gain(.6)
+.hpf(209)
+.slow(2)
+.room(.1)
+.roomsize(1)
+.mask("<0!8 1!6 0!99>")
+
+$:note("e4 e5 e4 < - - e5 -  > e4 e5 e4 <  - e5 - > ").s("gm_pad_warm")
+.orbit(1)
+  .gain(.5)
+.decay(33)
+.room(.2)
+.roomsize(.3)
+.mask("<0!8 1!6 0!2 1!99>")
+
+
+
+$:note("c4 < - c5  c4  c5*2 >  c4 <- c5 > c4 c5 c4 <c5 ->").s("gm_pad_warm")
+.mask("<0!8 0!6 1!99>")
+.gain(.6)
+
+$:stack(
+  s("- - - - - - - - - - - - - - - - "),
+  s("- - compurhythm8000_mt - - - - - - - - - - - - - "),
+  s("-  cp - - - - - - - - cp - - - - - "),
+ ).mask("<0!8 0!8 0!99>")
+
+$:s("d70_bd  - d70_bd - ").gain(1.32).mask("<0!8 1!8 1!99>")
+
+$:s("- bossdr220_sd - bossdr220_sd , alesissr16_hh*8").gain(.82).mask("<0!8 0!8 1!99>")
+
+
+
