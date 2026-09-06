@@ -1,0 +1,53 @@
+//26th beat
+//cant rush greatness
+setcpm(550/16)
+//intro
+$:note("e4 < - c4 > g3 d4,g4").s("gm_trombone")
+.orbit(1)
+.room(.2)
+.mask("<1 0 1 0>")
+$:note("e4 c5").s("gm_lead_7_fifths")
+.mask("<0 1 0 1 >")
+.gain(.6)
+$:note("<g4 a4> a4 c5 d5 c5 a4 e5 d5").s("gm_piano")
+.gain(.3)
+.vib(.5)
+//.slow(2)
+.lpf(2000)
+.lpq(1)
+.mask("<0 1 1 0>")
+$:s("gm_guitar_fret_noise")
+.mask("<0 0 0 0 1>")
+.gain(.2)
+.vib(.2)
+$:note("g4 a4 c5 d5 e5 d5 c5 a4").s("gm_lead_7_fifths")
+.mask("<0 0 0 0 1!999>")
+.lpf(2000)
+.gain(.6)
+$:stack(
+  s("hr16_bd - - - - - - hr16_bd - - - - -  - hr16_bd  - "),
+  s("- - - - - - dr550_cp - - - - - - - - - "),
+  s("- - 9000_hh 9000_hh - - - - - 9000_hh 9000_hh 9000_hh - - - - "),
+  s("- - - -  sd -  - - - - - - - - - - "),  
+)
+.mask("<0!4 1!4>")
+$:stack(
+  s("hr16_bd - - - hr16_bd - - - hr16_bd - - - hr16_bd - < hr16_bd - >< - hr16_bd > "),
+  s("hr16_bd - - - hr16_bd - - - hr16_bd - - - hr16_bd - < hr16_bd - >< - hr16_bd > "),
+
+  
+  s("- - dr550_cp - - - dr550_cp - - - - circuitsdrumtracks_sd - - - - "),
+  s("- - dr550_cp - - - dr550_cp - - - - circuitsdrumtracks_sd - - - - "),
+  
+  s("- - - - circuitsdrumtracks_sd - - - - - < - circuitsdrumtracks_sd > - - - - - "),
+  s("- - 9000_hh 9000_hh 9000_hh - - - - 9000_hh 9000_hh 9000_hh < - - 9000_hh> < - - 9000_hh> < - - 9000_hh> < - - 9000_hh> "),
+  )
+.mask("<0!8 1!9000>")
+$:note("c4 a3 ").s("gm_guitar_harmonics").fast(2)
+ .mask("<0!8 1!2 0!2 1!2 0!2 1!2 0!2 1!2 0!2 1!2 >")
+.punchcard()
+$:s("crow")
+.mask("<0!8 1!2 0!4 1!2 0!4 1!2 0!4  >")
+
+$:s("s").s("gm_gunshot")
+.mask("<0!8 1!2 0!4 1!2 0!4 1!2 0!4  >")
