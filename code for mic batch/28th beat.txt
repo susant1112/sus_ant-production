@@ -1,0 +1,52 @@
+//28th beat
+//cant rush greatness
+setcpm(590/16)
+//intro
+$:note("e4 e5 < - c4 g3> < - f3 e3> ").s("gm_piano")
+.fast(2)
+.orbit(2)
+.vib(.2)
+.vibmod(2)
+.room(.2)
+
+$:note("e3").s("gm_fx_brightness")
+.gain(.4)
+.mask("<1 0 1 0>")
+
+$:note("e3").s("gm_pan_flute")
+.mask("<0 1 0 1 >")
+.orbit(.2)
+.vib(.2)
+.vibmod(.2)
+
+$:note("e4 <e4 - > < - e4> < e4 -> ").s("gm_harmonica") .fast(2)
+.orbit(1.2)
+.vib(.2)
+.vibmod(.2)
+.room(.2)
+.mask("<0 0 0 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 >")
+
+$:stack(
+         s("akaixr10_hh akaixr10_hh akaixr10_hh - - - - - akaixr10_hh akaixr10_hh akaixr10_hh akaixr10_hh akaixr10_hh < akaixr10_hh akaixr10_hh*3> - -"),
+         s("- - - - - - - - - - - - - - - -"),
+)
+.mask("<0!4 1!4>")
+
+$:s("akaixr10_hh*8")
+.mask("<0!8 1!99>")
+
+$:stack(
+    s("ajkpercusyn_sd - - - - - - - - - - - - - bossdr550_lt - "),
+s("ajkpercusyn_sd - - - - - - - - - - - - - bossdr550_lt - "),
+  
+    s("- - - - < - - ajkpercusyn_sd ajkpercusyn_sd*2 > - - - - - - - - - - - "),
+  s("- - - - < - - ajkpercusyn_sd ajkpercusyn_sd*2 > - - - - - - - - - - - "),
+    s("- - - - - - - - - - <  - ry30_bd ry30_bd > - - - - - "),
+  s("- - - - - - - - - - <  - ry30_bd ry30_bd > - - - - - "),
+    s("- - < - mc303_rim > - - - - - - - - - - - - - "),
+s("- - < - mc303_rim > - - - - - - - - - - - - - "),
+  
+    s("- - - - - - - - - - - - - - < -  - akaimpc60_misc> <- - akaimpc60_misc> ").gain(.32)
+   )
+.mask("<0!8 1!999>")
+.punchcard()
