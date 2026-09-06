@@ -1,0 +1,97 @@
+
+//34th beat
+
+
+//intro
+
+$:note("e4  c4 c5 < - e5> d3 c4 ").s("gm_acoustic_guitar_steel")
+.lpf(9000)
+.lpq(2)
+.orbit(2)
+
+
+$:note("e4 e4 c4 e4").s("gm_banjo")
+.lpf(9000)
+.vib(.2)
+.vibmod(.2)
+.lpq(2)
+.gain(.9)
+.mask("<1!2 0!6 1!2 0!99>")
+
+
+$:note("c4 g4 c4 f4").s("gm_banjo")
+.lpf(9000)
+.vib(.2)
+.vibmod(.2)
+.lpq(2)
+.gain(.9)
+
+.mask("<0!2 1!2 0!6 1!2  0!99>")
+
+$:note("< g3 c4> <c4 b3>  c4 c4").s("gm_banjo")
+.lpf(9000)
+.vib(.2)
+.vibmod(.2)
+.lpq(2)
+.gain(.9)
+
+.mask("<0!4 1!2 0!6 1!2  0!99>")
+$:note("e4 g4 d3 - ").s("gm_banjo")
+.lpf(9000)
+.vib(.2)
+.vibmod(.2)
+.lpq(2)
+.gain(.9)
+
+.mask("<0!6 1!2 0!6 1!2 0!99>")
+
+
+$:s("gm_guitar_fret_noise")
+  .gain(.3)
+  .vib(.3)
+  .vibmod(.4)
+.mask("<0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 >")
+
+$:note("e4 c4 <g4 e3> e4").s("gm_banjo")
+.gain(1)
+
+.mask("<0!18 1!999>")
+
+$:stack(
+  s("jazz - - - - - - - jazz - - - - - - -"),
+  s("-  jazz - darbuka - - - - - - - jazz < - - darbuka > - jazz -"),
+  s("- - -  - jazz - - - - - - - - - -"),
+  s("ace_hh - - - - - < - - - ace_hh> < ace_hh - - ace_hh> - - - - ace_hh - - -"),
+  s("slapstick - - - - - - slapstick slapstick - - - - - - -"),
+  s("woodblock - - - - woodblock woodblock woodblock - - - - - - - -")
+)
+  
+.mask("<0!8 1!2 0!2 1!999>")
+._punchcard()
+$:stack(
+  s("- - - - - - - - - - - - - - - - "),
+  s("- - - - - - - - - - - - - - - - "),
+  s("- - - - - - - - - - - - - - - - "),
+  s("kalimba2 - handchimes - kalimba2 - handchimes - kalimba2 - handchimes - kalimba2 - handchimes - kalimba2")
+)
+.gain(.123)
+.mask("<0!15 1 0!99>")
+
+$:s("hihat*8").gain(.25)
+.mask("<1 1 0 0 0 0 1 1 0 0>")
+$:stack(
+  s("alesishr16_bd - - - - - - - - - - - - - - - -"),
+  s("- - - - - - alesishr16_bd - - - - - - - - - -"),
+  s("- - - - - - - - - - alesishr16_bd - alesishr16_bd - alesishr16_bd - < - -  alesishr16_bd>"),
+  s("- - handchimes - - - - - dr550_cp - - - - - - - -")
+).gain(.7890)
+  ._punchcard()
+.mask("<0!8 0!2 0!2 0!99>")
+
+$:s("alesishr16_bd alesishr16_sd alesishr16_bd alesishr16_sd")
+  .room(.3)
+.gain(.3)
+
+.mask("<0!10 1!2>")
+.punchcard()
+

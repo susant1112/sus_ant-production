@@ -1,0 +1,96 @@
+
+//35th beat
+
+//cant rush greatness
+
+$:note("e4 < - e5 -> c4 c5").s("gm_distortion_guitar")
+  .gain(.4)
+  .cutoff(1009)
+  .att(.3)
+.vib(.2)
+.vibmod(.2)
+
+
+$:note("e4 c4").s("gm_drawbar_organ")
+.vib(.2)
+.gain(.4)
+$:note("e4 d4 g4 a5 a5 a5").s("gm_acoustic_guitar_steel")
+.lpf(9000)
+.vib(2)
+.gain(.2)
+.vibmod(.4)
+$:note("e4").s("gm_fretless_bass")
+.cutoff(200)
+
+$:s("crow")
+  .gain(.4)
+  .mask("<0 0 0 0 1 0 0 1 0 0 1 0 0 1 >")
+$:note("e4 e4 e4 e5 e5 e5 c4 c6").s("gm_acoustic_guitar_steel").slow(2)
+
+$:note("< - e4> <e4 -> < - e4> < - e4>").s("gm_electric_bass_pick")
+.cutoff(1940)
+.fast(2)
+.gain(.3)
+
+$:s("dantranh_tremolo")
+.mask("<1  0 0 0 0 0 0 0 0!222 >")
+.gain(.4)
+.cutoff(.3)
+
+$:note("e4 e5 e4 e5 ,< - e3 >").s("gm_pizzicato_strings")
+.lpf(200)
+.lpq(2)
+.hpf(2)
+
+$:s("metal*4").mask("<0 0 0 0 1 1 0 0 0 0 0 1 1 >")
+.gain(.24)
+.room(.1)
+
+$:stack(
+  s("harp - - - - - - - - - tubularbells - - - - - -"),
+  s("- - - - - - - recorder_bass_sus recorder_bass_sus - - - - - - - -"),
+  s("- - - - tubularbells - - - - - - - - - - - -"),
+  s("- - - - - - - - - - - - - - - recorder_bass_sus -")
+)
+._punchcard()
+//drums
+$:stack(
+  s("ddr30_bd - - - - - - - - - ddr30_bd - - - - -"),
+  s("- - - - < compurhythm8000_cr - > - - - - - - - - - - -"),
+  s("- - - - - - ajkpercusyn_sd - - - - - - - - -"),
+  s("- - - - - - - - - ajkpercusyn_sd - ajkpercusyn_sd - < - ajkpercusyn_sd > - < - ajkpercusyn_sd>"),
+  s("- - snare_rim - - - - snare_rim - - - - - - - -"),
+  s("akaimpc60_hh - - - akaimpc60_hh*2 - - - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh ")
+    )
+  ._punchcard()
+.mask("<0!2 1 0!999>")
+.gain(.4)
+$:stack(
+s("alesishr16_bd - - - alesishr16_bd - - - alesishr16_bd - - - alesishr16_bd - - alesishr16_bd < - - - alesishr16_bd>"),
+s("- - - clap - - - - - - < - - - clap> - - - clap - -"),
+s("akaixr10_rim*8").gain(0.05).mask("<0!4 1 0 1 0 0!99>"),
+s("akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - < akaimpc60_hh akaimpc60_hh akaimpc60_hh akaimpc60_hh akaimpc60_hh bossdr110_cr > - < bossdr110_cr akaimpc60_hh akaimpc60_hh akaimpc60_hh akaimpc60_hh> - hh")
+)
+  .gain(.4)
+  ._punchcard()
+.mask("<0!2 0 1 0!999>")
+
+
+$:stack(
+ s("d70_bd - - - d70_bd - - sd - - sd - - - d70_bd - - "),
+ s("- - - hr16_cp - - - - - - - hr16_cp - 9000_rim - d70_bd - "),
+ s("9000_rim - - - - - - - - < snare_rim 9000_rim> - < snare_rim 9000_rim> - - - - - "),
+ s("akaimpc60_hh*16 ")
+)
+  ._punchcard()
+.mask("<0!4 1 0!999>")
+$:s("< 9000_bd 9000_bd> akaixr10_sd mc303_cp akaixr10_sd 9000_bd akaixr10_sd mc303_cp akaixr10_sd ").slow(2)
+.mask("<0!6 1!999>")
+._punchcard()
+$:note("e4 e4 e4 e4 ").s("piano1")
+.gain(.04)
+
+.punchcard()
+$:s("< 9000_bd 9000_bd> akaixr10_sd mc303_cp akaixr10_sd 9000_bd akaixr10_sd mc303_cp akaixr10_sd ").slow(2)
+.mask("<0!6 1!999>")
+.gain(.3)

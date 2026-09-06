@@ -1,0 +1,61 @@
+
+//32nd beat
+
+//imtro
+
+$:note("e4   c5  ") .s("gm_koto")
+.vib(3)
+.gain(.3)
+.orbit(.2)
+.room(.2)
+$:note("c4 g4 g3 c4").s("gm_shamisen")
+.room(.3)
+.gain(.3)
+ $:note("c4 c5 g4 g3").s("gm_timpani")
+.gain(.3)
+$:note("e4  <c4 c5>  g3 f4 f3 e3 g4 <d3 g4> ").s("gm_acoustic_guitar_steel")
+  .slow(2)
+.decay(2)
+.lpq(2)
+._punchcard()
+  .mask("<0 1 1 1 1 0  1 0 1 1>")
+.lpf(30000)
+$:note("d4  c4 d3").s("gm_acoustic_guitar_steel")
+  .fast(2)
+.room(.2)
+$:note("  - c6, d6 - ").s("gm_acoustic_guitar_steel")
+.gain(.4)
+$:note("c4 c4").s("gm_acoustic_guitar_steel")
+.mask("<0 0 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 >")
+$:s("gm_guitar_fret_noise")
+  .mask("<1 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 1 >")
+.lpf(7200)
+$:s("e4 e5 c5").s("gm_electric_guitar_muted").fast(2)
+$:note("c4 c4").s("gm_electric_guitar_muted")
+
+$:s("shaker_large").room(.2)
+.mask("<0 1 0 1 0 1 0 1 0 1 0 1 0 1 0>")
+
+$:stack(
+    s("9000_bd - - - - - - - bossdr550_cp - - - - - - -"),
+    s("9000_bd - - - < 9000_bd sd> - - - - - - - < sd 9000_bd> - - -"),
+    s("9000_bd - - - < 9000_bd -> - - - 9000_rim - - - - - - -"),
+    s("akaixr10_hh - < akaixr10_hh akaixr10_hh*2> - < akaixr10_hh akaixr10_hh*4 > - akaixr10_hh - akaixr10_hh - akaixr10_hh - akaixr10_hh - akaixr10_hh -"),
+)
+  
+.mask("<0!6 1!999>")
+$:s("<jazz d70_bd> <jazz akaixr10_sd>").gain(2).mask("<0!6 1!999>").fast(2).gain(.35)
+.mask("<0!9 1!999>")
+
+$:note("c4 c5 f4 g4 g5 d4 ").s("gm_electric_bass_finger")
+  .gain(.25)
+  .mask("<0 1 0 1 1!99 >")
+._punchcard()
+.punchcard()
+
+$:s("balafon_hard*4")
+.mask("<0 0 0 0 1 0 1 0 1 0 1 0>")
+
+
+$:s("darbuka")
+.mask("<0 0 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 0 0 0 0  >")

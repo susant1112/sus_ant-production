@@ -1,0 +1,83 @@
+//30th beat 
+setcpm(580/16)
+//intro
+$:note("e4 c4 e5 e4,<e4 c4 e5>").s("gm_epiano2").fast(2)
+.vib(.5)
+.gain(.5)
+.mask("<1 1 1 0 1 1 1 0 >")
+$:note("e4 c4 f4 < g4 c4 > ").s("gm_synth_bass_1")
+.orbit(2)
+.room(.2)
+._punchcard()
+$:note("e4 e5").s("gm_violin")
+.vib(.2)
+.gain(.3)
+.vibmod(.2)
+._punchcard()
+$:note("<e4 e5> <e4 e5>  <e4 e5> <e4 e5> <e4 e5> <e4 e5> <e4 e5> <e4 e5>").s("gm_agogo")
+.orbit(2)
+.room(2)
+.attack(.2)
+.mask("< 0 0 0 1!6 >")
+$:note("e4 e5").s("gm_flute")
+.vib(.4)
+.vibmod(2)
+.room(.2)
+.gain(.4)
+.mask("<0 0 1 1 0 0 1 1 0 0 >")
+$:note("e4").s("gm_lead_2_sawtooth")
+.gain(.3)
+.mask("<0 1 0 1 0 1 0 1 0 1 0>")
+$:note("< e5 e4> - < e5 e4> - < e5 e4> - < e5 e4> -  ").s("gm_harmonica")
+.gain(.2)
+$:s("metal*4").fast(4)
+.gain(.2)
+.vib(.2)
+.mask("<0 0 1 0 1 0 0 1 0>")
+$:note("e3").s("ballwhistle")
+.gain(.6)
+.mask("<0 0 0 0 1 0 1 >")
+$:s("< - - - gm_oboe>")     
+.gain(.5)
+.vib(.2)
+.room(.2)
+.roomsize(.2)
+$:stack(
+  s("hh - hh - - - hh hh hh - - - hh hh hh - ").mask("<0!4 1!999>"),
+  s("hh - hh - hh - hh - hh - hh - hh - hh - ").mask("<0!6 1!999>"),
+  s("hh*2 hh*2 hh*2 - - - -  hh*2  hh*2  hh*2 - -  hh*2  hh*2  hh*2 - ").mask("<0!8 1!999>"),
+  s("hh - hh - - hh hh - - hh - - - - - - ").mask("<0!10 1!999>") 
+)._punchcard()
+.gain(.8)
+$:stack(
+   s("emudrumulator_bd - emudrumulator_bd - emudrumulator_bd - emudrumulator_bd - emudrumulator_bd - emudrumulator_bd - emudrumulator_bd - emudrumulator_bd - ").mask("<0!4 1!99>"),
+   s("kpr77_cp - - - -  -  kpr77_cp  - - - kpr77_cp - - - - - ").mask("<0!4 1!99>"),
+   s("compurhythm8000_mt - - - - - compurhythm8000_mt - - - compurhythm8000_mt - - - - - ").mask("<0!4 1!99>"),
+)
+.gain(.4)
+.room(2)
+//.mask("<0!4 1!999>")
+
+$:s("<rolandsystem100_bd ace_sd casiovl1_sd>         rolandsystem100_bd    ace_sd").mask("<0!8 1!99>").gain(2)
+$:s("- bossdr220_cp    -     bossdr220_cp").mask("<0!8 1!99>").gain(.7)
+$:s("- akailinn_lt     -     akailinn_lt").mask("<0!8 1!99>").gain(2)
+$:s("alesishr16_bd < casiovl1_sd*2 bossdr220_sd >  alesishr16_bd    bossdr220_sd").mask("<0!8 1!99>")
+$:s("bd - bd -").mask("<0!6 1!999>")
+$:s("<akaixr10_sh*3 akaixr10_sh*6 korgm1_cp*3 >").fast(2).mask("<0!6 0 1 0 1 0 1 0 1 0 1  0 1 0 1 0 1 >")
+.punchcard()
+$:s("corw").gain(.2)
+  .room(.4)
+.mask("<0 1 0 0 0 0 0 1 1 0 0 1 1 >")
+$:s("gm_harpsichord").gain(.2)
+.mask("<1!4 0!4   1!4 0!4    1!4 0!4      >")
+
+
+$:s("< folkharp  folkharp*2> ").gain(.62)
+.slow(4)
+.decay(2)
+
+$:s("space").gain(.3)
+
+$:s("9000_hh*4").fast(4)
+  .gain(.32)
+.mask("<0!2 1 0!4 1 0 0 0 0 1 0 0 0 1 >")

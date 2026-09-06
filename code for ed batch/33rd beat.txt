@@ -1,0 +1,88 @@
+
+//33rd beat
+
+//intro
+
+$:note("e4 f4 c4 < d4 g4>").s("gm_epiano1")
+.gain(.23)
+
+
+$:stack(
+ s(" sax_stacc - - - - sax_stacc -  sax_stacc - sax_stacc  - - - - "),//.mask("<0 0 0 1 0 1 0 1 >"),
+ s("- - organ_full - - - organ_full - - - handchimes < - - handchimes> < - - handchimes> - - - "),
+ s("- - - - - - - folkharfp folkharp - - - - - - - "),
+ s("psaltery_spiccato - - - - - - - - - -  psaltery_spiccato - - - - "),
+  s("- - - - balafon - balafon - balafon - balafon - - - - - ").mask("< 0 0 0 1 1 1 0 0 1 1 >")
+)
+._punchcard()
+$:note("g44 g5 g3 g5 f6 g4 g4 c4").s("gm_banjo")
+  //.gain
+.lpf(2000)
+.mask("<0 0 0 0 1!999>")
+$:s("folkharp")
+
+$:note("< - e4> g4  d3 d4 < c33 b3>  -,< e4 - - - - - >").s("gm_fiddle").gain(.4)
+._punchcard()
+$:note("e3 e4 d4 g4 e6").s("gm_acoustic_guitar_steel")
+
+$:note("gm_acoustic_guitar_steel").gain(.2)
+
+$:note("gm_celesta")
+
+$:note("e4 e3 g3 ").s("gm_lead_3_calliope")
+.gain(.4)
+
+$:note("  < d4 - - e4> ").s("gm_reed_organ")
+
+$:s("dantranh_tremolo")
+.decay(.3)
+
+$:note("e4 c5 -").s("gm_bassoon")
+.vib(2)
+.vibmod(.5)
+.gain(.2)
+.mask("<1!4 0!4 1!4 0!4>")
+$:stack(
+  s("alesishr16_bd - - - - - - - - - - - - - - -" ),
+  s("- - - akaixr10_sd - - - - - - - - - - - - "),
+  s("- - - - - - - - akaixr10_sd - - - - - - - "),
+  s("- - - akaimpc60_rim - - clap - - alesishr16_bd - - clap clap - -" ),
+  s("akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh -" )  
+    )
+    .room(.04)
+
+  ._punchcard()
+.mask("<0!4 1!9999>")
+$:note("e4  c4 [e5 g4 d4] ").s("gm_orchestra_hit")
+.lpf(4000)
+.decay(2)
+.mask("<0 1 0 1 1 0 0 1 0 1 0 1 0 1 0 1 1 1 >")
+._punchcard()
+
+
+//main drums part 
+$:stack(
+    s("circuitstom_bd - - - circuitstom_bd - -   - circuitstom_bd -  - -  circuitstom_bd - - -"),
+    s("- - d70_cp d70_cp - - - - < - - -bossdr110_sd*3> - - - d70_cp - - -"),
+    s("- - - - - - bossdr550_rim - - - < - - d70_cp> - - bossdr550_rim < - - bossdr550_rim> < - - bossdr550_rim> "),
+    s("akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh -")
+)
+.mask("<0!8 1!999>")
+._punchcard()
+$:s("crow").gain(.12)
+  .vib(3)
+  .vibmod(.2)
+  .room(.4)
+  .mask("<0 0 0 1 0 0 0 1  1 0 0 0 >")
+.echo(3, 1/3, .8)
+//.punchcard()
+
+$:s("gm_breath_noise").mask("<0 0 0 0  1 1 1 0 0 1 0 1 0 1 0 1 0> ")
+
+$:stack(
+    s("circuitstom_bd - - - circuitstom_bd - -   - circuitstom_bd -  - -  circuitstom_bd - - -"),
+    s("- - d70_cp d70_cp - - - - < - - -bossdr110_sd*3> - - - d70_cp - - -"),
+    s("- - - - - - bossdr550_rim - - - < - - d70_cp> - - bossdr550_rim < - - bossdr550_rim> < - - bossdr550_rim> "),
+   // s("akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh - akaimpc60_hh -")
+  )
+.mask("<0!8 1!999>")

@@ -1,0 +1,107 @@
+//36th beat
+$:note("e4 c4 g4 d4 ").s("gm_acoustic_guitar_steel")
+.lpf(10000)
+.lpq(2)
+.cutoff(1000)
+.decay(2)
+.mask("<1 0 0 0>")
+._punchcard()
+$:note("a4 d4 c3 a3").s("gm_acoustic_guitar_steel")
+  .lpf(10000)
+.lpq(2)
+.cutoff(1000)
+.decay(2)
+.mask("<0 1 0 0>")
+._punchcard()
+
+$:note("c3 c4").s("gm_acoustic_guitar_steel")
+  .lpf(10000)
+.lpq(2)
+._punchcard()
+.gain(.4)
+.decay(2)
+.mask("<0 0 1 1 0 0 1 1 0 0 1 1  >")
+
+$:note("e4 c4 ").s("gm_acoustic_guitar_steel")
+.gain(.4)
+.mask("<0 0 0 1 1 1 1 1 0 0 0 1 1 >")
+
+
+$:note("e4 c4 g3 d4").s("gm_acoustic_guitar_steel")
+  ._punchcard()
+.gain(.4)
+.vib(.3)
+.vibmod(.3)
+.room(.2)
+.mask("<0 0 1 0 >")
+
+$:note("d3 g4 c6 a4").s("gm_acoustic_guitar_steel")
+  ._punchcard()
+
+  .gain(.4)
+.vib(.3)
+.vibmod(.3)
+.room(.2)
+.mask("<0 0 0 1 >")
+
+$:note("e4 e4 e4 c4 c4 c4").s("gm_harpsichord")
+.gain(.19670)
+.vib(.3)
+.mask("<0 0 1 0 0 0 0 0 0 0 1 >")
+
+$:note("< d3 c4> c2").s("gm_electric_guitar_muted")
+.fast(2)
+.gain(.4)
+.vibmod(.3)
+.mask("<0 1 0 1 0 1 0  0 0 1 0 1 0 0 1 0 1 >")
+
+$:s("timpani_roll").mask("<0 0 1 1 0 0 0 0 1 1 0 0 >")
+.gain(.4)
+
+$:s("organ_4inch")
+  .mask("<0 0 1 1 0 0 0 0 0 1 1 0 0 >")
+.cutoff(30)
+
+$:stack(
+  s("shaker_small shaker_small - - - - - shaker_small shaker_small - - shaker_small shaker_small - - -"),
+  s("- snare_hi - - - - - snare_hi - - - - < - - ratchet - trainwhistle> - - ratchet").gain(.4),
+  s("- - recorder_alto_sus - - - - - < - - - gm_fx_rain> - recorder_alto_sus - - - - -"),
+  )
+  ._punchcard()
+.gain(.78)
+.mask("<1!99>")
+
+
+
+$:stack(
+ s("circuitsdrumtracks_bd - - - - - circuitsdrumtracks_bd - - - - - circuitsdrumtracks_bd - - -"),
+  s("akailinn_mt - - - - - akailinn_mt - - - - - - - - -").gain(.5),
+ s("circuitsdrumtracks_bd - - - - - circuitsdrumtracks_bd - - - - - circuitsdrumtracks_bd - - -").gain(.5),
+ s("jazz - - bossdr110_sd - jazz - - - bossdr110_sd - jazz - - < - - bossdr110_sd> -"),
+ s("- - compurhythm1000_cp - - - - - - - - < - korgddm110_rim> < - korgddm110_rim> < - korgddm110_rim> < korgddm110_rim - -  compurhythm1000_cp> -"),
+ s("< akaimpc60_hh compurhythm78_hh> < - - compurhythm78_hh - akaimpc60_hh akaimpc60_hh*3 akaimpc60_hh*4 > - - < compurhythm78_hh akaimpc60_hh> - < akaimpc60_hh - akaimpc60_hh  compurhythm78_hh*3 akaimpc60_hh*2 akaimpc60_hh*4> - < compurhythm78_hh akaimpc60_hh akaimpc60_hh*3> - <akaimpc60_hh compurhythm78_hh> - <akaimpc60_hh compurhythm78_hh> - < compurhythm78_hh compurhythm78_hh dr110_cr akaimpc60_hh compurhythm78_hh > -").gain(1.245),
+)
+  
+  .slow(2)
+  ._scope()
+  .mask("<0!6 1!99999>")
+._punchcard()
+ $:s("<bd d70_bd ace_sd  gm_melodic_tom >*2,<white pink brown>*8")
+.decay(.04).sustain(0)._scope()
+ .mask("<0!4 1!99999>")
+
+$:s("metal*4")
+.gain(.24)
+.fast(2)
+  .lpf(8000)
+  
+.mask("< 0 0 0 1 0 1 0 1 1 0 1 1 0 >")
+
+$:s("gm_marimba")
+.mask("<0 0 0 1 0 1 0 1 0 0 1 0 1 >")
+
+$:s("gm_viola - - - gm_viola")
+  .gain(.1)
+  .vib(.2)
+  .mask("<0 0 0 0 0 0 1 1 1 0 0 0 0>")
+.punchcard()
