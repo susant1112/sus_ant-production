@@ -1,0 +1,111 @@
+//31th beat
+//intro
+
+setcpm(540/16)
+
+$:note("e4 e5 c4 c5 ").s("gm_piano").pan(0)
+.orbit(2)
+.gain(.5)
+.room(.1)
+
+$:note("c4 e4 g4").s("gm_piano").pan(1).gain(.5)
+.room(.1)
+$:note(" <g4 g4*2 g4*3> <c5 c5*4>").s("gm_steel_drums").gain(.5)
+  
+//.mask("<0 1 0 1 0!99>")
+
+$:note("< g4 f4 >").s("gm_epiano2").gain(.5)
+ $:note("<[c3,eb3,g3] [f3,a3,c4]>").room(.4)
+
+$:note("<c4 - > <g3 f3> <f4 f4*3>").s("gm_fx_brightness")
+.mask("<1!4 0!4>")
+.gain(.7)
+.orbit(.2).gain(.5)
+
+$:note(" <e4 g4> e4 <e4 c4>").s("gm_harmonica")
+$:note("e4 e4").s("gm_agogo")
+
+
+$:note("e4 c4 f4 < c4 g3>").s("gm_epiano2").mask("<0!4 1!4>")
+$:s("gm_fx_rain*4")
+.mask("<0!4 1!4>")
+
+$:note("e4 e4 e4 e4 c4 c4 c4 c4").s("gm_marimba")
+.mask("<1!4 0!999>")
+
+$:s("gm_helicopter").mask("<0 0 0 0 0 0 1 1 0 0 1  1 >")
+.pan(0).gain(.5)
+
+$:note("e4 c4 d4  - ").s("gm_fx_brightness").pan(0)
+$:note(" - - -  <f3 g4 [f3 f3 f3] g4>").s("gm_fx_brightness").pan(1)
+
+$:s("clap - - -").gain(.5).pan(0)
+$:s("- - -   clap").pan(1)
+//intro drums
+$:stack(
+  s("compurhythm8000_hh - - - - - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh*3 - compurhythm8000_hh*3 - compurhythm8000_hh*3 -").mask("<0!2 1!2 0!99>"),
+  s("compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh -").mask("<0!4 1!2 0!99>"),
+  s("compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - <compurhythm8000_hh*2 compurhythm8000_hh*3 compurhythm8000_hh*2 compurhythm8000_hh> -  compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh - compurhythm8000_hh -").mask("<0!6 1!99>"),
+  s("- - - - - korgm1_rim - - -  - - korgm1_rim <- - korgm1_rim> <- - korgm1_rim> -").gain(.7),
+  s("- - - - - - - - < - - - compurhythm8000_hh*6> - - - - - - -"),
+  s("- - < - bossdr110_cp bossdr110_cp> - - - - - - - <bossdr110_cp - bossdr110_cp> - - - - -"),
+  s("- - - - - - - jd990_cr - - - - - - - jd990_cr").gain(.3),
+  s("- - - rolandtr505_perc - - rolandtr505_perc  - - - rolandtr505_perc - - - rolandtr505_perc - ")
+   )
+
+
+
+$:note("e4 < g4 e3> d4 f4 c5 <f4 d3> ").s("gm_church_organ")//.slow(2)
+  ._punchcard()
+.gain(.3)
+.vib(.5)
+.orbit(.5)
+.vibmod(.9)
+.orbit(.2)
+.lpf(5550)
+.lpq(2)
+.mask("<0!2 1!9999>")
+    $:s("< dr220_bd dr220_bd*2> alesishr16_sd dr220_bd  alesishr16_sd ").mask("<0!4 1!9999>").pan(brand)
+    $:s("dr220_bd -             dr220_bd  - ").gain(.5).mask("<0!4 1!9999>")
+    $:s("dr220_bd -  akaixr10_rim   -      ").mask("<0!4 1!9999>")
+    $:s("dr220_bd -             dr220_bd  ace_perc ").mask("<0!4 1!9999>")
+$:s("shaker_large*3")
+.gain(.2)
+
+$:s("psaltery_pluck")
+.mask("<0 0 0 0 0 0 1 0 1 0 1 0 1 0 1 0 1>")
+
+$:note("e4 e4 e4 e4 ").s("gm_harpsichord").slow(.5)
+.mask("<0 1 0 1 0 1 0 1 0 1>")
+.room(2)
+.gain(.3)
+
+$:s("crow")
+  .room(2)
+  .gain(.4)
+.mask("< 0 1 0 0 0 0 1 0 1 0 >")
+
+$:s("metal*4").fast(2)
+.mask("< 0 1 0 0 0 0 1 0 1 0 >")
+
+.punchcard()
+
+
+$:s("gm_guitar_harmonics")
+.mask("< 0 1 0 0 0 0 1 0 1 0 >")
+
+$:note("e4 e5").s("gm_english_horn")
+  .gain(.6)
+.mask("< 1 0 0 0 1 0 1 0 1 0 >")
+
+$:note("f4").s("gm_harpsichord")
+.gain(.3)
+  .room(.5)
+.decay(22)
+.mask("< 0 0 1 0 1 0 1 0 0>")
+
+
+$:note("g4 c4 g4 c4 g4 c4 g4 c4").s("gm_electric_bass_pick")
+.mask("<1!2 0!99>")
+.gain(.5)
+.gain(.2)
