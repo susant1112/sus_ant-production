@@ -1,0 +1,94 @@
+//29th beat 
+
+
+setcpm(540/16)
+
+//intro= - - d - d  - d - 
+
+$:note("e4 < - e4 > e5 ").s("gm_epiano1")
+.orbit(.2)
+  .gain(.6)
+.room(.2)
+  //.fast(2)
+.attack(.02)
+.release(.06)
+._punchcard()
+
+$:note("< f4 e4>  < - - c4 - - e4 > e5 ").s("gm_epiano1")  .gain(.6)
+.orbit(.2)
+.room(.2)
+  .fast(2)
+.attack(.02)
+.release(.06)
+._punchcard()
+
+$:note("e4 e4 e4 ").s("gm_drawbar_organ")
+  .orbit(2)
+  .room(.2)
+  .vib(.2)
+  .vibmod(2)
+  gain(.7)
+.mask("<0 1 0 1 0 1 0 1 0 1 0 1 0 1>")
+
+
+$:note("e4 c4 e5 c5").s("gm_distortion_guitar")
+.fast(4)
+.room(.2)
+.gain(.3)
+.mask("<0!2 1!4 0!4 1!4 1!1 0!4 0!4 1!1 0!4 >")
+
+$:note("c4  ").s("gm_acoustic_bass")
+.gain(.5)
+.room(.3)
+.roomsize(.4)
+.mask("<0!4 1!2 0!4 0!4 1!1 0!4 0!4 1!1 0!4 >")
+
+$:note("e4 e4 f4 c4 e4 c4 f3 g4  ").s("gm_bandoneon").slow(2)
+._punchcard()
+.orbit(.2)
+.room(.2)
+.mask("<0!6 1!403>")
+.roomsize(.44)
+.gain(.8)
+
+
+
+$:stack(
+   s("korgddm110_hh - korgddm110_hh - korgddm110_hh - korgddm110_hh - korgddm110_hh - korgddm110_hh - korgddm110_hh - korgddm110_hh -").mask("<0!4 1!1 0!3 1!1 1!1 0!3 1!1 0!999 >"),
+   s("korgddm110_hh korgddm110_hh korgddm110_hh - korgddm110_hh korgddm110_hh korgddm110_hh - korgddm110_hh korgddm110_hh korgddm110_hh - korgddm110_hh korgddm110_hh korgddm110_hh -").mask("<0!4 0!1 1!1 0!2 0 1 0!1 1!1 0!2 0 1 0!999 >"),  
+   s("korgddm110_hh*2 korgddm110_hh*2 - - korgddm110_hh*2  - korgddm110_hh korgddm110_hh korgddm110_hh - <korgddm110_hh*2 akaixr10_sh> - korgddm110_hh korgddm110_hh korgddm110_hh -").mask("<0!4 0!1 0!1 1 0!2 0 1 0!1 0!1 0 0!2 0 0 0 0!999 >"),  
+   s("korgddm110_hh*16").mask("<0!7 1 0!3 1 1 0!3 1  0!999 >"), 
+)
+
+$:stack(
+   s("akaimpc60_rim - - - - - - - akaimpc60_rim - - - akaimpc60_rim < - - akaimpc60_rim > - -"),
+   s("- - - - akaimpc60_rim - - - - - - - - - - -"),
+   s("- - rolandmc303_cp - - - bossdr110_sd - - - rolandmc303_cp - - - - -"), 
+   )
+  ._punchcard()
+
+  .gain(1.5)
+.mask("<0!8 1!9999>")
+
+
+$:s("< sh09_bd sh09_bd*2 > < bossdr110_sd bossdr110_sd*3 linndrum_sd >       rolandsystem100_bd bossdr110_sd").gain(2)
+
+.mask("<0!16 1!9999>")
+
+$:s("< korgddm110_hh  bossdr110_oh>*8")
+.mask("<0!16 1!999>")
+
+$:s("crow")
+  .gain(.5)
+.vib(.2)
+  .vibmod(.2)
+  .orbit(2)
+.mask("<0!2 1 0!2 0!2 1 0!2 0!2 1 0!2 0!2 1 0!2 >")
+
+$:s("east east east east ")
+.mask("< 0 1 0 1 0 1 0 1 0 1 0 1 0 1 >")
+  .room(.52)
+.punchcard()
+
+$:s("ratchet").fast(2)
+.gain(.6)
