@@ -1,0 +1,47 @@
+// idk the num at this point
+
+setcpm(440/16)
+
+
+// background melody
+$:note("e4 e5 ").s("gm_steel_drums").slow(1)
+.room(.2)
+  .decay(1)
+  .hurry(2)
+  .lpq(2).punchcard()
+  .hpf(200)
+.mask("<1 1 1 0  >")
+
+$:note(" c4 eb4 g4 bb4 ").s("gm_steel_drums").room(2)
+.mask("<0 0 0 0 0 0   1   >")
+.punchcard()
+
+
+$:note("e4 e5").s("gm_pad_poly")
+  .gain(.7).room(.6)
+  .lpf(20000)
+.mask("<0 1 1 0 1  1 1  0 1  >").punchcard()
+
+
+$:note("c5 e5 g5 a5 g5 e5 d5 c5").s("gm_harmonica").gain(.4)//.slow(4)
+.room(1).decay(2)
+.lpq(2)
+.lpf(10000)
+.mask("<0 0 1 1 1 1 1 1!9999>")
+._punchcard()
+//introo
+
+$:s("ddm110_hh*8,- - <  circuitsdrumtracks_rim circuitsdrumtracks_rim >   - ").gain(.5)
+.mask("<0 0 1 1 1 1 1 0!9999>")
+.punchcard()
+// main drums ig
+
+
+$:stack(
+  s("dr220_bd - - - - - - - - - - - - - dr220_bd - ").gain(1).room(.1),
+  s("- - - - - -  -  alesissr16_sd - - - - - - - - ").gain(1),
+  s("- - - < -  korgm1_cp > - - alesissr16_sd - - - - korgm1_cp - - - rim"),
+  s("ddm110_hh < ddm110_hh ddm110_hh*2> < ddm110_hh ddm110_hh*2> ddm110_hh ddm110_hh ddm110_hh ddm110_hh ddm110_hh").gain(.5)
+).punchcard()
+.mask("<0 0 0 0 0 0 0 1!6 0 1!9999 >")
+._punchcard()
