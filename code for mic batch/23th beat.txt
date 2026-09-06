@@ -1,0 +1,74 @@
+//23th beat
+//cant rush greatness
+setcpm(550/16)
+//introo 
+$:note("< e4 f3 > < e5 c4 c5> ").s("gm_piano")
+.orbit(1)
+.vib(.1)
+.room(.3)
+.roomsize(3)
+.lpf(20000)
+.lpq(2)
+
+$:note(" c4 c5  c5 c5 -  g3 ").s("gm_electric_bass_pick")
+.lpf(2000)
+
+$:note(" e4 e5 ").s("gm_fx_crystal")
+.decay(1)
+.orbit(1)
+.vib(.2)
+.room(2)
+.gain(.5)
+
+$:note("< c4 e5 >  e4").s("gm_violin").slow(1)
+.orbit(2)
+.mask("<0 0 1 0 1 0 >")
+
+$:note("g6 b5 b3 ").s("gm_electric_guitar_muted")
+//.gain(.5)
+//.vib(2)
+//.vibmod(.5)
+.orbit(2)
+.attack(.2)
+
+$:s("e5").s("clavisynth")
+.mask("<0 0 1 1 >")
+
+$:note("e3").s("gm_synth_choir")
+.orbit(2)
+.lpf("2000")
+.mask("<0 1 0 0 >")
+
+$:note("c5 f3 c5 < - g4 > , f6 ").s("gm_slap_bass_1")
+$:s("space").gain(.2).slow(4)
+
+$:stack(
+    s("dr220_bd - - - dr220_bd  - - - - - - - - - - -"),
+    s("- - - - - - - - - xxx emudrumulator_sd - - - - - "),
+    s("- - - - - - - - jazz - - - - - xr10_lt - ").gain(.9),
+    s("- - - - - - - - bossdr550_cp - - - - - xr10_lt - "),
+    )
+.gain(1.5)
+.mask("<0!6 1!6  0!999>")
+
+$:s("bd,bd")
+.mask("<0!6 1 0!9999>")
+//second drumss
+
+$:stack(
+  s("- - - rim - - - rim - - - - - rim - - "),
+  s("- - - jazz - - - jazz - - - - - jazz - - "),
+  s("- - bossdr550_cp - - - bossdr550_cp - - < - bossdr550_cp > -  - - - bossdr550_cp - "),
+  s("- - bossdr550_cp - - - bossdr550_cp - - < - bossdr550_cp > -  - - - bossdr550_cp - "),
+  s("yamaharx5_bd - - - yamaharx5_bd - - yamaharx5_bd - - yamaharx5_bd - yamaharx5_bd -  yamaharx5_bd - ").gain(4),
+  s("yamaharx5_bd - - - yamaharx5_bd - - yamaharx5_bd - - yamaharx5_bd - yamaharx5_bd -  yamaharx5_bd - ").gain(4),
+   s("yamaharx5_bd - - - yamaharx5_bd - - yamaharx5_bd - - yamaharx5_bd - yamaharx5_bd -  yamaharx5_bd - ").gain(4),
+  s("yamaharx5_bd - - - yamaharx5_bd - - yamaharx5_bd - - yamaharx5_bd - yamaharx5_bd -  yamaharx5_bd - ").gain(4),
+)
+  //.hpf(1000)
+  
+  .gain(1.7)
+.mask("<0!14 1!99>")
+  
+._punchcard()
+.punchcard()
