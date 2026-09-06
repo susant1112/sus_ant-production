@@ -1,0 +1,67 @@
+//27th beatt
+//cant rush greatness
+setcpm(580/16)
+//intro
+$:note("e4 c4 g4").s("gm_piano").fast(4)
+  .orbit(4)
+  .gain(.5)
+  .lpq(2)
+  .lpf(10000)
+.mask("< 1 0 1 0 >")
+$:note("e4  - e4 - e4").s("gm_lead_3_calliope")
+.mask("<0 1 0 1 >").fast(2)
+$:note("e4").s("gm_shamisen")
+.mask("<0 1!2 0!2>")
+$:note(" c4 f3 e4 d4").s("gm_synth_bass_2")
+.lpf(4000)
+.mask("<0 0 1!4 0!2 1!4>")
+$:note("e5 e5  c4  c5").s("gm_shamisen")
+.vib(.2)
+.vibmod(.2)
+.lpf(10000)
+.gain(1.2)
+.lpq(2)
+.room(.2)
+.mask("< 0!4 0!2 1!2 0!2 1!2 0!2 1!2 >")
+$:s("space").gain(.11)
+.mask("<0 0 1 1 0 0 >")
+$:s("psaltery_spiccato")
+$:s("<e4 -> < - e5 >").s("gm_music_box")
+.gain(.5)
+.vib(.2)
+.vibmod(.2)
+$:stack(
+  s("bossdr110_hh bossdr110_hh bossdr110_hh - < - - bossdr110_hh > - - - < - - bossdr110_hh > - - - bossdr110_hh bossdr110_hh bossdr110_hh -"),
+)
+.mask("<0!4 1!4 0!2 1!8 1!4 0!2 1!8 1!4 0!2 1!8>")
+
+$:note("c4").s("gm_bagpipe")
+.gain(.2)
+.room(.2)
+.mask("<0!2 1!2 0!2 1!2 0!2 1!2 0!2 1!2 0!2 1!2 0!2 1!2 0!2 1!2  >")
+$:stack(
+  s(" < bd compurhythm1000_ht> - - - - - <compurhythm1000_ht bd > - - - - - < bd compurhythm1000_ht> - - - "),
+  s(" < yamahary30_rim - > - - - - - < - yamahary30_rim > - - - - - < yamahary30_rim - > - - - "),
+  s(" - - - compurhythm8000_cp - - - - < circuitsdrumtracks_sd - circuitsdrumtracks_sd circuitsdrumtracks_sd circuitsdrumtracks_sd > < - circuitsdrumtracks_sd circuitsdrumtracks_sd circuitsdrumtracks_sd circuitsdrumtracks_sd bossdr550_mt > - - - - - - "),
+  s("- - - compurhythm8000_cp - - - - < circuitsdrumtracks_sd - circuitsdrumtracks_sd circuitsdrumtracks_sd circuitsdrumtracks_sd > < - circuitsdrumtracks_sd circuitsdrumtracks_sd circuitsdrumtracks_sd circuitsdrumtracks_sd bossdr550_mt > - - - - - - "),
+    s(" - - - - < - - - - compurhythm8000_cp > < - - - - compurhythm8000_cp > - - - - compurhythm8000_cp - - - - - "),
+)
+  ._punchcard()
+.punchcard()
+  
+.mask("<0!4 1!999>")
+$:note("e4 e5").s("gm_fx_atmosphere")._punchcard()
+.vib(2)
+.vibmod(.2)
+.mask("<0!4 0!2 1!2 0!2 1!2 0!2 1!2  >")
+$:s("vibraphone")
+.mask("<0 1 0 0 0 1 0 1 0 0 1 0 0 0 1 0 1 0>")
+$:s("akaixr10_bd bossdr220_sd akaixr10_bd bossdr220_sd , < - akaimpc60_perc akaimpc60_perc*2> - < akaimpc60_perc akaimpc60_perc*3 - > ")
+.room(.2)
+  .vib(.2)
+  .vibmod(.2)
+.mask("<0!6 1!999 >")
+
+
+$:s("shaker_large")
+.lpf(2000)
